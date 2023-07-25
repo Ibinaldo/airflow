@@ -5,7 +5,7 @@ from datetime import datetime, timedelta
 
 @dag(
     "hello_world",
-    default_args=(
+    default_args={
         "owner": "Ibinaldo",
         "depends_on_past": False,
         "email": "ibi.best@gmail.com"
@@ -14,7 +14,7 @@ from datetime import datetime, timedelta
         "retries": 2,
         "retry_delay": timedelta(minutes=2),
         "start_date": datetime(2023,01,01)
-    ),
+    },
     description="DAG to validate git sync",
     schedule_interval="@hourly"
 
