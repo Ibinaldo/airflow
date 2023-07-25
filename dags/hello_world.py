@@ -13,7 +13,7 @@ from datetime import datetime, timedelta
         "email_on_retry": False,
         "retries": 2,
         "retry_delay": timedelta(minutes=2),
-        "start_date": datetime(2023,01,01)
+        "start_date": datetime(2023,1,1)
     },
     description="DAG to validate git sync",
     schedule_interval="@hourly"
